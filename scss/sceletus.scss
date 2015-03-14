@@ -1,0 +1,416 @@
+/*
+Name:           sceletus.css
+Description:    CSS framework
+Version:        v1.4.0
+Author:         Tristan White
+Author URI:     http://sceletus.net
+*/
+
+$white: #FFFFFF;
+$black: #19191A;
+$red: #E0645C;
+$green: #46B98A;
+$blue: #2DB6CF;
+$yellow: #f1DE79;
+$light-grey: #999999;
+$dark-grey: #444444;
+
+/***********************************************/
+/******************** GRID *********************/
+/***********************************************/
+* { box-sizing: border-box; }
+.container { margin-right: auto; margin-left: auto; padding-left: 5px; padding-right: 5px; }
+@media (min-width: 768px) { .container { width: 750px; } }
+@media (min-width: 992px) { .container { width: 970px; } }
+@media (min-width: 1200px) { .container { width: 1170px; } }
+.col-xs-1, .col-s-1, .col-m-1, .col-l-1, 
+.col-xs-2, .col-s-2, .col-m-2, .col-l-2, 
+.col-xs-3, .col-s-3, .col-m-3, .col-l-3, 
+.col-xs-4, .col-s-4, .col-m-4, .col-l-4, 
+.col-xs-5, .col-s-5, .col-m-5, .col-l-5, 
+.col-xs-6, .col-s-6, .col-m-6, .col-l-6, 
+.col-xs-7, .col-s-7, .col-m-7, .col-l-7, 
+.col-xs-8, .col-s-8, .col-m-8, .col-l-8, 
+.col-xs-9, .col-s-9, .col-m-9, .col-l-9, 
+.col-xs-10, .col-s-10, .col-m-10, .col-l-10, 
+.col-xs-11, .col-s-11, .col-m-11, .col-l-11, 
+.col-xs-12, .col-s-12, .col-m-12, .col-l-12 {
+    position: relative; 
+    min-height: 1px; 
+}
+.col-xs-1, .col-xs-2, .col-xs-3, 
+.col-xs-4, .col-xs-5, .col-xs-6, 
+.col-xs-7, .col-xs-8, .col-xs-9, 
+.col-xs-10, .col-xs-11, .col-xs-12 { 
+    float: left; 
+}
+.col-xs-12 { width: 100%; }
+.col-xs-11 { width: 91.66666667%; }
+.col-xs-10 { width: 83.33333333%; }
+.col-xs-9 { width: 75%; }
+.col-xs-8 { width: 66.66666667%; }
+.col-xs-7 { width: 58.33333333%; }
+.col-xs-6 { width: 50%; }
+.col-xs-5 { width: 41.66666667%; }
+.col-xs-4 { width: 33.33333333%; }
+.col-xs-3 { width: 25%; }
+.col-xs-2 { width: 16.66666667%; }
+.col-xs-1 { width: 8.33333333%; }
+@media (min-width: 768px) { 
+    .col-s-1, .col-s-2, .col-s-3, 
+    .col-s-4, .col-s-5, .col-s-6, 
+    .col-s-7, .col-s-8, .col-s-9, 
+    .col-s-10, .col-s-11, .col-s-12 { 
+        float: left; 
+    }
+    .col-s-12 { width: 100%; }
+    .col-s-11 { width: 91.66666667%; }
+    .col-s-10 { width: 83.33333333%; }
+    .col-s-9 { width: 75%; }
+    .col-s-8 { width: 66.66666667%; }
+    .col-s-7 { width: 58.33333333%; }
+    .col-s-6 { width: 50%; }
+    .col-s-5 { width: 41.66666667%; }
+    .col-s-4 { width: 33.33333333%; }
+    .col-s-3 { width: 25%; }
+    .col-s-2 { width: 16.66666667%; }
+    .col-s-1 { width: 8.33333333%; }
+}
+@media (min-width: 992px) { 
+    .col-m-1, .col-m-2, .col-m-3, 
+    .col-m-4, .col-m-5, .col-m-6, 
+    .col-m-7, .col-m-8, .col-m-9, 
+    .col-m-10, .col-m-11, .col-m-12 { 
+        float: left; 
+    }
+    .col-m-12 { width: 100%; }
+    .col-m-11 { width: 91.66666667%; }
+    .col-m-10 { width: 83.33333333%; }
+    .col-m-9 { width: 75%; }
+    .col-m-8 { width: 66.66666667%; }
+    .col-m-7 { width: 58.33333333%; }
+    .col-m-6 { width: 50%; }
+    .col-m-5 { width: 41.66666667%; }
+    .col-m-4 { width: 33.33333333%; }
+    .col-m-3 { width: 25%; }
+    .col-m-2 { width: 16.66666667%; }
+    .col-m-1 { width: 8.33333333%; }
+}
+@media (min-width: 1200px) { 
+    .col-l-1, .col-l-2, .col-l-3, 
+    .col-l-4, .col-l-5, .col-l-6, 
+    .col-l-7, .col-l-8, .col-l-9, 
+    .col-l-10, .col-l-11, .col-l-12 { 
+        float: left; 
+    }
+    .col-l-12 { width: 100%; }
+    .col-l-11 { width: 91.66666667%; }
+    .col-l-10 { width: 83.33333333%; }
+    .col-l-9 { width: 75%; }
+    .col-l-8 { width: 66.66666667%; }
+    .col-l-7 { width: 58.33333333%; }
+    .col-l-6 { width: 50%; }
+    .col-l-5 { width: 41.66666667%; }
+    .col-l-4 { width: 33.33333333%; }
+    .col-l-3 { width: 25%; }
+    .col-l-2 { width: 16.66666667%; }
+    .col-l-1 { width: 8.33333333%; }
+}
+.container:before, .container:after, .row:before, .row:after { content: ""; display: table; }
+.container:after, .row:after { clear: both; }
+
+/***********************************************/
+/****************** UTILITIES ******************/
+/***********************************************/
+.center-text { text-align: center; }
+.pull-right { float: right; }
+.pull-left { float: left; }
+.clear { content: ""; display: table; clear: both; }
+.full-width { width: 100%; }
+.disabled { pointer-events: none; cursor: crosshair; color: lighten( $light-grey, 30% ) !important; }
+.animated, .animated:hover { 
+    transition: all 170ms ease;
+}
+
+/***********************************************/
+/****************** TYPOGRAPHY *****************/
+/***********************************************/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700);
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.5em;
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: $black;
+}
+h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 2rem; font-weight: 300; }
+h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+p { font-weight: 400; font-size: 1.5rem;}
+a { color: $blue; }
+a:hover { color: darken($blue, 10%); }
+hr {border: 0; height: 1px; background: darken($light-grey, 20%); margin-top:10px; margin-bottom: 10px;}
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  white-space: nowrap;
+  background: lighten($light-grey, 35%);
+  border: 1px solid lighten($light-grey, 25%);
+  border-radius: 4px; 
+}
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; 
+}
+
+
+/***********************************************/
+/******************* TABLES ********************/
+/***********************************************/
+table { 
+    width: 100%; border-spacing: 0px; border-collapse: separate;
+    thead tr th { 
+        text-align: left; border-bottom: 1px solid #999; padding: 5px; 
+    }
+    tbody tr:nth-child(even) { 
+        background: lighten($light-grey, 36.5%); 
+    }
+    tbody tr:hover { 
+        background: lighten($light-grey, 35%);
+    }
+    tbody tr td { 
+        padding: 5px;
+    }
+}
+
+/***********************************************/
+/******************* BUTTONS *******************/
+/***********************************************/
+.button {
+    border: 0 none;
+    border-radius: 2px 2px 2px 2px;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding: 7px 10px;
+    text-transform: none;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    text-align: center;
+    text-decoration: none;
+}
+.button.big { 
+    font-size: 18px; line-height: 24px; padding: 13px 17px;
+}
+.button.small { 
+    font-size: 12px; line-height: 16px; padding: 3px 5px; 
+}
+.button.red { 
+    background: none repeat scroll 0 0 $red; color: $white; 
+    &:hover { background: none repeat scroll 0 0 $light-grey; color: $white;
+    }
+}
+.button.dark { 
+    background: none repeat scroll 0 0 $dark-grey; color: $white;
+    &:hover { background: none repeat scroll 0 0 $blue; color: $white; 
+    }
+}
+.button.light { 
+    background: none repeat scroll 0 0 $light-grey; color: $white;
+    &:hover { 
+        background: none repeat scroll 0 0 $dark-grey; color: $white; 
+    } 
+}
+.button.green { 
+    background: none repeat scroll 0 0 $green; color: $white; 
+    &:hover { 
+        background: none repeat scroll 0 0 $dark-grey; color: $white; 
+    }
+}
+.button.blue { 
+    background: none repeat scroll 0 0 $blue; color: $white;
+    &:hover { 
+        background: none repeat scroll 0 0 $dark-grey; color: $white; 
+    }
+}
+.button.yellow { 
+    background: none repeat scroll 0 0 $yellow; color: darken($white, 3%); 
+    &:hover { 
+        background: none repeat scroll 0 0 $light-grey; color: $white; 
+    }
+}
+
+/***********************************************/
+/******************** LISTS ********************/
+/***********************************************/
+ul { 
+    list-style: circle inside none; 
+    li { 
+        margin-left: 15px; line-height: 30px; font-size: inherit; 
+        ul { 
+            list-style: circle inside none; margin-bottom: 0px;
+            li { 
+                font-size: inherit;  
+            } 
+        }
+        ol li { 
+            font-size: inherit;  
+        }
+    }
+}
+ol { 
+    list-style: decimal inside none; margin-bottom: 10px; 
+    li { 
+        margin-left: 15px; line-height: 30px; font-size: inherit; 
+        ol { 
+            list-style: disc inside none; margin-bottom: 0px; 
+            li { 
+                font-size: inherit; 
+            }
+        }
+        ul li { 
+            font-size: inherit; 
+        }
+    }
+}
+
+/***********************************************/
+/******************** MODAL ********************/
+/***********************************************/
+.modal_overlay {
+    background: $black;
+    color: $white !important;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: -800;
+    opacity: 0;
+    overflow: hidden;
+    transform: scale(0.5);
+    transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}      
+.modal_box {
+    padding: 1em .75em;
+    position: relative;
+    margin: 1em auto;
+    max-width: 500px;
+    width: 90%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -80%);
+    label {
+        color: $black;
+        background: $white;
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        height: 1.5em;
+        line-height: 1.5em;
+        position: absolute;
+        right: .5em;
+        top: .5em;
+        width: 1.5em;
+    }
+}
+
+input:checked#modal {
+    position: absolute;
+   top: -9999px;
+   left: -9999px;   
+}
+input:checked#modal ~ .modal_overlay {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 800;
+}
+
+/***********************************************/
+/******************** FORMS ********************/
+/***********************************************/
+.sceletus_form input[type="text"],
+.sceletus_form input[type="email"],
+.sceletus_form input[type="password"] {
+    margin: 40px 0px;
+    width: 100%;
+    display: block;
+    font-size: 1.5rem;
+    border: none;
+    padding: 10px 0;
+    border-bottom: solid 1px $dark-grey;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 95%, $dark-grey 5%);
+    background-position: -1000px 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: darken($dark-grey, 20%);
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        background-position: 0 0;
+        &::-webkit-input-placeholder {
+            color: $dark-grey;
+            transform: translateY(-20px);
+            visibility: visible !important;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    &::-webkit-input-placeholder {
+        transition: all 0.1s ease-in-out;
+    }
+}
+.sceletus_form textarea {
+    background: $white;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    width: 100%;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: solid 1px $dark-grey;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 99%, $dark-grey 1%);
+    background-position: -1000px 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: darken($dark-grey, 20%);
+    padding: 20px 0;
+    min-height: 120px;
+    transform: translateX(0%);
+    transition: all 0.3s ease-in-out;
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        background-position: 0 0;
+        &::-webkit-input-placeholder {
+            color: $dark-grey;
+            transform: translateY(-20px);
+            visibility: visible !important;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    &::-webkit-input-placeholder {
+        transition: all 0.1s ease-in-out;
+    }
+}
+.sceletus_form input[type="checkbox"],
+.sceletus_form input[type="radio"] {
+    margin: 8px 5px 0px;
+}
