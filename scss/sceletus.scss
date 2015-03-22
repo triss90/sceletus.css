@@ -6,6 +6,7 @@ Author:         Tristan White
 Author URI:     http://sceletus.net
 */
 
+// Colours
 $white: #FFFFFF;
 $black: #19191A;
 $red: #E0645C;
@@ -128,9 +129,9 @@ $dark-grey: #444444;
 .clear { content: ""; display: table; clear: both; }
 .full-width { width: 100%; }
 .disabled { pointer-events: none; cursor: crosshair; color: lighten( $light-grey, 30% ) !important; }
-.animated, .animated:hover { 
-    transition: all 170ms ease;
-}
+.muted { color: $light-grey; }
+.animated, .animated:hover { transition: all 170ms ease; }
+.sceletus-img { max-width: 100%; height: auto; display: block; }
 
 /***********************************************/
 /****************** TYPOGRAPHY *****************/
@@ -173,6 +174,37 @@ pre > code {
 
 
 /***********************************************/
+/******************* LABELS ********************/
+/***********************************************/
+.label {
+    border: 0 none;
+    border-radius: 2px 2px 2px 2px;
+    color: $white;
+    display: inline-block;
+    font-size: 12px; 
+    line-height: 16px; 
+    padding: 0px 6px; 
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-transform: none;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    text-align: center;
+    text-decoration: none;
+    &.red { background: none repeat scroll 0 0 $red; color: $white; }
+    &.dark { background: none repeat scroll 0 0 $dark-grey; color: $white; }
+    &.light { background: none repeat scroll 0 0 $light-grey; color: $white; }
+    &.green { background: none repeat scroll 0 0 $green; color: $white; }
+    &.blue { background: none repeat scroll 0 0 $blue; color: $white; }
+    &.yellow { background: none repeat scroll 0 0 $yellow; color: darken($white, 3%); }
+}
+
+
+
+/***********************************************/
 /******************* TABLES ********************/
 /***********************************************/
 table { 
@@ -212,47 +244,44 @@ table {
     -webkit-transition: all 0.3s ease 0s;
     text-align: center;
     text-decoration: none;
-}
-.button.big { 
-    font-size: 18px; line-height: 24px; padding: 13px 17px;
-}
-.button.small { 
-    font-size: 12px; line-height: 16px; padding: 3px 5px; 
-}
-.button.red { 
-    background: none repeat scroll 0 0 $red; color: $white; 
-    &:hover { background: none repeat scroll 0 0 $light-grey; color: $white;
+    &.big { font-size: 18px; line-height: 24px; padding: 13px 17px; }
+    &.small { font-size: 12px; line-height: 16px; padding: 3px 5px; }
+    &.red { 
+        background: none repeat scroll 0 0 $red; color: $white; 
+        &:hover { background: none repeat scroll 0 0 $light-grey; color: $white;
+        }
+    }
+    &.dark { 
+        background: none repeat scroll 0 0 $dark-grey; color: $white;
+        &:hover { background: none repeat scroll 0 0 $blue; color: $white; 
+        }
+    }
+    &.light { 
+        background: none repeat scroll 0 0 $light-grey; color: $white;
+        &:hover { 
+            background: none repeat scroll 0 0 $dark-grey; color: $white; 
+        } 
+    }
+    &.green { 
+        background: none repeat scroll 0 0 $green; color: $white; 
+        &:hover { 
+            background: none repeat scroll 0 0 $dark-grey; color: $white; 
+        }
+    }
+    &.blue { 
+        background: none repeat scroll 0 0 $blue; color: $white;
+        &:hover { 
+            background: none repeat scroll 0 0 $dark-grey; color: $white; 
+        }
+    }
+    &.yellow { 
+        background: none repeat scroll 0 0 $yellow; color: darken($white, 3%); 
+        &:hover { 
+            background: none repeat scroll 0 0 $light-grey; color: $white; 
+        }
     }
 }
-.button.dark { 
-    background: none repeat scroll 0 0 $dark-grey; color: $white;
-    &:hover { background: none repeat scroll 0 0 $blue; color: $white; 
-    }
-}
-.button.light { 
-    background: none repeat scroll 0 0 $light-grey; color: $white;
-    &:hover { 
-        background: none repeat scroll 0 0 $dark-grey; color: $white; 
-    } 
-}
-.button.green { 
-    background: none repeat scroll 0 0 $green; color: $white; 
-    &:hover { 
-        background: none repeat scroll 0 0 $dark-grey; color: $white; 
-    }
-}
-.button.blue { 
-    background: none repeat scroll 0 0 $blue; color: $white;
-    &:hover { 
-        background: none repeat scroll 0 0 $dark-grey; color: $white; 
-    }
-}
-.button.yellow { 
-    background: none repeat scroll 0 0 $yellow; color: darken($white, 3%); 
-    &:hover { 
-        background: none repeat scroll 0 0 $light-grey; color: $white; 
-    }
-}
+
 
 /***********************************************/
 /******************** LISTS ********************/
@@ -333,14 +362,134 @@ ol {
 
 input:checked#modal {
     position: absolute;
-   top: -9999px;
-   left: -9999px;   
+    top: -9999px;
+    left: -9999px;   
 }
 input:checked#modal ~ .modal_overlay {
     opacity: 1;
     transform: scale(1);
     transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
     z-index: 800;
+}
+
+/***********************************************/
+/******************** ALERTS *******************/
+/***********************************************/
+.sceletus-alert {
+    padding: 20px;
+    background-color: $light-grey;
+    color: $white;
+    font-size: 1.3rem;
+    text-align: left;
+    a{ 
+        color: $white;
+        transition: all 0.1s ease-out;
+        -webkit-transition: all 0.1s ease-out;
+        -o-transition: all 0.1s ease-out;
+        -moz-transition: all 0.1s ease-out;
+        &:hover {
+            color: $black; 
+            transition: all 0.1s ease-in;
+            -webkit-transition: all 0.1s ease-in;
+            -o-transition: all 0.1s ease-in;
+            -moz-transition: all 0.1s ease-in;
+        }
+    }
+    &.success{ 
+        background-color: $green;
+        transition: all 0.1s ease-out;
+        -webkit-transition: all 0.1s ease-out;
+        -o-transition: all 0.1s ease-out;
+        -moz-transition: all 0.1s ease-out;
+        &:hover {
+            background-color: darken($green, 5%); 
+            transition: all 0.1s ease-in;
+            -webkit-transition: all 0.1s ease-in;
+            -o-transition: all 0.1s ease-in;
+            -moz-transition: all 0.1s ease-in;
+        }
+    }
+    &.warning{ 
+        background-color: $yellow;
+        transition: all 0.1s ease-out;
+        -webkit-transition: all 0.1s ease-out;
+        -o-transition: all 0.1s ease-out;
+        -moz-transition: all 0.1s ease-out;
+        &:hover {
+            background-color: darken($yellow, 5%); 
+            transition: all 0.1s ease-in;
+            -webkit-transition: all 0.1s ease-in;
+            -o-transition: all 0.1s ease-in;
+            -moz-transition: all 0.1s ease-in;
+        }
+    }
+    &.error{ 
+        background-color: $red;
+        transition: all 0.1s ease-out;
+        -webkit-transition: all 0.1s ease-out;
+        -o-transition: all 0.1s ease-out;
+        -moz-transition: all 0.1s ease-out;
+        &:hover {
+            background-color: darken($red, 5%); 
+            transition: all 0.1s ease-in;
+            -webkit-transition: all 0.1s ease-in;
+            -o-transition: all 0.1s ease-in;
+            -moz-transition: all 0.1s ease-in;
+        }
+    }
+    &.message{ 
+        background-color: $blue;
+        transition: all 0.1s ease-out;
+        -webkit-transition: all 0.1s ease-out;
+        -o-transition: all 0.1s ease-out;
+        -moz-transition: all 0.1s ease-out;
+        &:hover {
+            background-color: darken($blue, 5%); 
+            transition: all 0.1s ease-in;
+            -webkit-transition: all 0.1s ease-in;
+            -o-transition: all 0.1s ease-in;
+            -moz-transition: all 0.1s ease-in;
+        }
+    }
+    .close {
+        position: relative;
+        float: right;
+        color: $white;
+        text-decoration: none;
+        padding: 20px;
+        top: -20px; 
+        cursor: pointer; 
+    }
+}
+input:checked#message ~ .sceletus-alert.message,
+input:checked#success ~ .sceletus-alert.success,
+input:checked#warning ~ .sceletus-alert.warning,
+input:checked#error ~ .sceletus-alert.error { display: none; }
+
+/***********************************************/
+/**************** IMAGE SHAPES *****************/
+/***********************************************/
+.rounded {
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.circle {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.border {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid $light-grey;
+    padding: 5px;
 }
 
 /***********************************************/

@@ -102,7 +102,11 @@ Author URI:     http://sceletus.net
 
 .disabled { pointer-events: none; cursor: crosshair; color: #e6e6e6 !important; }
 
+.muted { color: #999999; }
+
 .animated, .animated:hover { transition: all 170ms ease; }
+
+.sceletus-img { max-width: 100%; height: auto; display: block; }
 
 /***********************************************/
 /****************** TYPOGRAPHY *****************/
@@ -138,6 +142,17 @@ code { padding: .2rem .5rem; margin: 0 .2rem; white-space: nowrap; background: #
 pre > code { display: block; padding: 1rem 1.5rem; white-space: pre; }
 
 /***********************************************/
+/******************* LABELS ********************/
+/***********************************************/
+.label { border: 0 none; border-radius: 2px 2px 2px 2px; color: #FFFFFF; display: inline-block; font-size: 12px; line-height: 16px; padding: 0px 6px; font-weight: 300; line-height: 20px; margin-bottom: 0; margin-top: 10px; text-transform: none; transition: all 0.3s ease 0s; -moz-transition: all 0.3s ease 0s; -webkit-transition: all 0.3s ease 0s; text-align: center; text-decoration: none; }
+.label.red { background: none repeat scroll 0 0 #E0645C; color: #FFFFFF; }
+.label.dark { background: none repeat scroll 0 0 #444444; color: #FFFFFF; }
+.label.light { background: none repeat scroll 0 0 #999999; color: #FFFFFF; }
+.label.green { background: none repeat scroll 0 0 #46B98A; color: #FFFFFF; }
+.label.blue { background: none repeat scroll 0 0 #2DB6CF; color: #FFFFFF; }
+.label.yellow { background: none repeat scroll 0 0 #f1DE79; color: #f7f7f7; }
+
+/***********************************************/
 /******************* TABLES ********************/
 /***********************************************/
 table { width: 100%; border-spacing: 0px; border-collapse: separate; }
@@ -150,26 +165,18 @@ table tbody tr td { padding: 5px; }
 /******************* BUTTONS *******************/
 /***********************************************/
 .button { border: 0 none; border-radius: 2px 2px 2px 2px; color: #FFFFFF; cursor: pointer; display: inline-block; font-size: 14px; font-weight: 400; line-height: 20px; margin-bottom: 0; margin-top: 10px; padding: 7px 10px; text-transform: none; transition: all 0.3s ease 0s; -moz-transition: all 0.3s ease 0s; -webkit-transition: all 0.3s ease 0s; text-align: center; text-decoration: none; }
-
 .button.big { font-size: 18px; line-height: 24px; padding: 13px 17px; }
-
 .button.small { font-size: 12px; line-height: 16px; padding: 3px 5px; }
-
 .button.red { background: none repeat scroll 0 0 #E0645C; color: #FFFFFF; }
 .button.red:hover { background: none repeat scroll 0 0 #999999; color: #FFFFFF; }
-
 .button.dark { background: none repeat scroll 0 0 #444444; color: #FFFFFF; }
 .button.dark:hover { background: none repeat scroll 0 0 #2DB6CF; color: #FFFFFF; }
-
 .button.light { background: none repeat scroll 0 0 #999999; color: #FFFFFF; }
 .button.light:hover { background: none repeat scroll 0 0 #444444; color: #FFFFFF; }
-
 .button.green { background: none repeat scroll 0 0 #46B98A; color: #FFFFFF; }
 .button.green:hover { background: none repeat scroll 0 0 #444444; color: #FFFFFF; }
-
 .button.blue { background: none repeat scroll 0 0 #2DB6CF; color: #FFFFFF; }
 .button.blue:hover { background: none repeat scroll 0 0 #444444; color: #FFFFFF; }
-
 .button.yellow { background: none repeat scroll 0 0 #f1DE79; color: #f7f7f7; }
 .button.yellow:hover { background: none repeat scroll 0 0 #999999; color: #FFFFFF; }
 
@@ -199,6 +206,33 @@ ol li ul li { font-size: inherit; }
 input:checked#modal { position: absolute; top: -9999px; left: -9999px; }
 
 input:checked#modal ~ .modal_overlay { opacity: 1; transform: scale(1); transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1); z-index: 800; }
+
+/***********************************************/
+/******************** ALERTS *******************/
+/***********************************************/
+.sceletus-alert { padding: 20px; background-color: #999999; color: #FFFFFF; font-size: 1.3rem; text-align: left; }
+.sceletus-alert a { color: #FFFFFF; transition: all 0.1s ease-out; -webkit-transition: all 0.1s ease-out; -o-transition: all 0.1s ease-out; -moz-transition: all 0.1s ease-out; }
+.sceletus-alert a:hover { color: #19191A; transition: all 0.1s ease-in; -webkit-transition: all 0.1s ease-in; -o-transition: all 0.1s ease-in; -moz-transition: all 0.1s ease-in; }
+.sceletus-alert.success { background-color: #46B98A; transition: all 0.1s ease-out; -webkit-transition: all 0.1s ease-out; -o-transition: all 0.1s ease-out; -moz-transition: all 0.1s ease-out; }
+.sceletus-alert.success:hover { background-color: #3fa77c; transition: all 0.1s ease-in; -webkit-transition: all 0.1s ease-in; -o-transition: all 0.1s ease-in; -moz-transition: all 0.1s ease-in; }
+.sceletus-alert.warning { background-color: #f1DE79; transition: all 0.1s ease-out; -webkit-transition: all 0.1s ease-out; -o-transition: all 0.1s ease-out; -moz-transition: all 0.1s ease-out; }
+.sceletus-alert.warning:hover { background-color: #efd862; transition: all 0.1s ease-in; -webkit-transition: all 0.1s ease-in; -o-transition: all 0.1s ease-in; -moz-transition: all 0.1s ease-in; }
+.sceletus-alert.error { background-color: #E0645C; transition: all 0.1s ease-out; -webkit-transition: all 0.1s ease-out; -o-transition: all 0.1s ease-out; -moz-transition: all 0.1s ease-out; }
+.sceletus-alert.error:hover { background-color: #dc5047; transition: all 0.1s ease-in; -webkit-transition: all 0.1s ease-in; -o-transition: all 0.1s ease-in; -moz-transition: all 0.1s ease-in; }
+.sceletus-alert.message { background-color: #2DB6CF; transition: all 0.1s ease-out; -webkit-transition: all 0.1s ease-out; -o-transition: all 0.1s ease-out; -moz-transition: all 0.1s ease-out; }
+.sceletus-alert.message:hover { background-color: #28a4ba; transition: all 0.1s ease-in; -webkit-transition: all 0.1s ease-in; -o-transition: all 0.1s ease-in; -moz-transition: all 0.1s ease-in; }
+.sceletus-alert .close { position: relative; float: right; color: #FFFFFF; text-decoration: none; padding: 20px; top: -20px; cursor: pointer; }
+
+input:checked#message ~ .sceletus-alert.message, input:checked#success ~ .sceletus-alert.success, input:checked#warning ~ .sceletus-alert.warning, input:checked#error ~ .sceletus-alert.error { display: none; }
+
+/***********************************************/
+/**************** IMAGE SHAPES *****************/
+/***********************************************/
+.rounded { -moz-border-radius: 15px; -webkit-border-radius: 15px; -o-border-radius: 15px; border-radius: 15px; }
+
+.circle { -moz-border-radius: 50%; -webkit-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
+
+.border { -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; border: 1px solid #999999; padding: 5px; }
 
 /***********************************************/
 /******************** FORMS ********************/
