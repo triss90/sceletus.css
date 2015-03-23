@@ -1,14 +1,18 @@
 /*
 Name:           sceletus.css
 Description:    CSS framework
-Version:        v1.4.0
+Version:        v1.6.1
 Author:         Tristan White
 Author URI:     http://sceletus.net
 */
 /***********************************************/
-/******************** GRID *********************/
+/******************** FONTS ********************/
 /***********************************************/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700);
+@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+/***********************************************/
+/******************** GRID *********************/
+/***********************************************/
 * { box-sizing: border-box; }
 
 .container { margin-right: auto; margin-left: auto; padding-left: 5px; padding-right: 5px; }
@@ -237,18 +241,39 @@ input:checked#message ~ .sceletus-alert.message, input:checked#success ~ .scelet
 /***********************************************/
 /******************** FORMS ********************/
 /***********************************************/
-.sceletus_form input[type="text"], .sceletus_form input[type="email"], .sceletus_form input[type="password"] { margin: 40px 0px; width: 100%; display: block; font-size: 1.5rem; border: none; padding: 10px 0; border-bottom: solid 1px #444444; transition: all 0.3s ease-in-out; background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, #444444 5%); background-position: -1000px 0; background-size: 100% 100%; background-repeat: no-repeat; color: #111111; }
-.sceletus_form input[type="text"]:focus, .sceletus_form input[type="email"]:focus, .sceletus_form input[type="password"]:focus { box-shadow: none; outline: none; background-position: 0 0; }
-.sceletus_form input[type="text"]:focus::-webkit-input-placeholder, .sceletus_form input[type="email"]:focus::-webkit-input-placeholder, .sceletus_form input[type="password"]:focus::-webkit-input-placeholder { color: #444444; transform: translateY(-20px); visibility: visible !important; transition: all 0.3s ease-in-out; }
-.sceletus_form input[type="text"]::-webkit-input-placeholder, .sceletus_form input[type="email"]::-webkit-input-placeholder, .sceletus_form input[type="password"]::-webkit-input-placeholder { transition: all 0.1s ease-in-out; }
+.sceletus-form label { cursor: pointer; }
 
-.sceletus_form textarea { background: #FFFFFF; margin-bottom: 10px; margin-top: -10px; width: 100%; font-size: 1.5rem; border: none; border-bottom: solid 1px #444444; transition: all 0.3s ease-in-out; background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 99%, #444444 1%); background-position: -1000px 0; background-size: 100% 100%; background-repeat: no-repeat; color: #111111; padding: 20px 0; min-height: 120px; transform: translateX(0%); transition: all 0.3s ease-in-out; }
-.sceletus_form textarea:focus { box-shadow: none; outline: none; background-position: 0 0; }
-.sceletus_form textarea:focus::-webkit-input-placeholder { color: #444444; transform: translateY(-20px); visibility: visible !important; transition: all 0.3s ease-in-out; }
-.sceletus_form textarea::-webkit-input-placeholder { transition: all 0.1s ease-in-out; }
+.sceletus-form input[type="text"], .sceletus-form input[type="email"], .sceletus-form input[type="password"], .sceletus-form textarea { margin: 12px 0; padding: 7px 5px; width: 100%; background: none; border: none; border-bottom: 1px solid #444444; font-size: 1.5rem; }
+.sceletus-form input[type="text"]:focus, .sceletus-form input[type="email"]:focus, .sceletus-form input[type="password"]:focus, .sceletus-form textarea:focus { box-shadow: none; outline: none; background-position: 0 0; }
+.sceletus-form input[type="text"]:focus::-webkit-input-placeholder, .sceletus-form input[type="email"]:focus::-webkit-input-placeholder, .sceletus-form input[type="password"]:focus::-webkit-input-placeholder, .sceletus-form textarea:focus::-webkit-input-placeholder { color: #444444; transform: translateY(-25px); visibility: visible !important; transition: all 0.3s ease-in-out; }
+.sceletus-form input[type="text"]::-webkit-input-placeholder, .sceletus-form input[type="email"]::-webkit-input-placeholder, .sceletus-form input[type="password"]::-webkit-input-placeholder, .sceletus-form textarea::-webkit-input-placeholder { transition: all 0.1s ease-in-out; }
 
-.sceletus_form input[type="checkbox"], .sceletus_form input[type="radio"] { margin: 8px 5px 0px; }
+.sceletus-form textarea { padding: 20px 5px; margin-top: -5px; }
 
+.sceletus-form input[type="radio"] { display: none; }
+.sceletus-form input[type="radio"] + .sceletus-radio:before { content: "\f111"; color: #444444; font-family: "FontAwesome"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; widht: 1.5em; display: inline-block; margin-right: 5px; }
+.sceletus-form input[type="radio"]:checked + .sceletus-radio:before { content: "\f192"; color: #444444; animation: tick 0.2s ease-in; -webkit-animation: tick 0.2s ease-in; -moz-animation: tick 0.2s ease-in; -o-animation: tick 0.2s ease-in; }
+.sceletus-form input[type="radio"]:disabled + .sceletus-radio { color: #999999; }
+.sceletus-form input[type="radio"]:disabled + .sceletus-radio:before { content: "\f111"; color: #999999; }
+
+.sceletus-form input[type="checkbox"] { display: none; }
+.sceletus-form input[type="checkbox"] + .sceletus-check:before { content: "\f0c8"; color: #444444; font-family: "FontAwesome"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; widht: 1.5em; display: inline-block; margin-right: 5px; }
+.sceletus-form input[type="checkbox"]:checked + .sceletus-check:before { content: "\f14a"; color: #444444; animation: tick 0.2s ease-in; -webkit-animation: tick 0.2s ease-in; -moz-animation: tick 0.2s ease-in; -o-animation: tick 0.2s ease-in; }
+.sceletus-form input[type="checkbox"]:disabled + .sceletus-check { color: #999999; }
+.sceletus-form input[type="checkbox"]:disabled + .sceletus-check:before { content: "\f0c8"; color: #999999; }
+
+@-webkit-keyframes tick { 0% { transform: scale(0); }
+  90% { transform: scale(1.4); }
+  100% { transform: scale(1); } }
+@-moz-keyframes tick { 0% { transform: scale(0); }
+  90% { transform: scale(1.4); }
+  100% { transform: scale(1); } }
+@-o-keyframes tick { 0% { transform: scale(0); }
+  90% { transform: scale(1.4); }
+  100% { transform: scale(1); } }
+@keyframes tick { 0% { transform: scale(0); }
+  90% { transform: scale(1.4); }
+  100% { transform: scale(1); } }
 /***********************************************/
 /******************** VIDEO ********************/
 /***********************************************/

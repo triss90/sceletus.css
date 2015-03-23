@@ -1,7 +1,7 @@
 /*
 Name:           sceletus.css
 Description:    CSS framework
-Version:        v1.4.0
+Version:        v1.6.1
 Author:         Tristan White
 Author URI:     http://sceletus.net
 */
@@ -15,6 +15,13 @@ $blue: #2DB6CF;
 $yellow: #f1DE79;
 $light-grey: #999999;
 $dark-grey: #444444;
+
+/***********************************************/
+/******************** FONTS ********************/
+/***********************************************/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700);
+@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+
 
 /***********************************************/
 /******************** GRID *********************/
@@ -120,6 +127,7 @@ $dark-grey: #444444;
 .container:before, .container:after, .row:before, .row:after { content: ""; display: table; }
 .container:after, .row:after { clear: both; }
 
+
 /***********************************************/
 /****************** UTILITIES ******************/
 /***********************************************/
@@ -133,10 +141,10 @@ $dark-grey: #444444;
 .animated, .animated:hover { transition: all 170ms ease; }
 .sceletus-img { max-width: 100%; height: auto; display: block; }
 
+
 /***********************************************/
 /****************** TYPOGRAPHY *****************/
 /***********************************************/
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700);
 html {
     font-size: 62.5%;
 }
@@ -203,7 +211,6 @@ pre > code {
 }
 
 
-
 /***********************************************/
 /******************* TABLES ********************/
 /***********************************************/
@@ -222,6 +229,7 @@ table {
         padding: 5px;
     }
 }
+
 
 /***********************************************/
 /******************* BUTTONS *******************/
@@ -317,6 +325,7 @@ ol {
     }
 }
 
+
 /***********************************************/
 /******************** MODAL ********************/
 /***********************************************/
@@ -371,6 +380,7 @@ input:checked#modal ~ .modal_overlay {
     transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
     z-index: 800;
 }
+
 
 /***********************************************/
 /******************** ALERTS *******************/
@@ -466,6 +476,7 @@ input:checked#success ~ .sceletus-alert.success,
 input:checked#warning ~ .sceletus-alert.warning,
 input:checked#error ~ .sceletus-alert.error { display: none; }
 
+
 /***********************************************/
 /**************** IMAGE SHAPES *****************/
 /***********************************************/
@@ -492,32 +503,29 @@ input:checked#error ~ .sceletus-alert.error { display: none; }
     padding: 5px;
 }
 
+
 /***********************************************/
 /******************** FORMS ********************/
 /***********************************************/
-.sceletus_form input[type="text"],
-.sceletus_form input[type="email"],
-.sceletus_form input[type="password"] {
-    margin: 40px 0px;
+.sceletus-form label { cursor: pointer; }
+.sceletus-form input[type="text"],
+.sceletus-form input[type="email"],
+.sceletus-form input[type="password"],
+.sceletus-form textarea {
+    margin: 12px 0;
+    padding: 7px 5px;
     width: 100%;
-    display: block;
-    font-size: 1.5rem;
+    background: none;
     border: none;
-    padding: 10px 0;
-    border-bottom: solid 1px $dark-grey;
-    transition: all 0.3s ease-in-out;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 95%, $dark-grey 5%);
-    background-position: -1000px 0;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    color: darken($dark-grey, 20%);
+    border-bottom: 1px solid $dark-grey;
+    font-size: 1.5rem;
     &:focus {
         box-shadow: none;
         outline: none;
         background-position: 0 0;
         &::-webkit-input-placeholder {
             color: $dark-grey;
-            transform: translateY(-20px);
+            transform: translateY(-25px);
             visibility: visible !important;
             transition: all 0.3s ease-in-out;
         }
@@ -526,43 +534,99 @@ input:checked#error ~ .sceletus-alert.error { display: none; }
         transition: all 0.1s ease-in-out;
     }
 }
-.sceletus_form textarea {
-    background: $white;
-    margin-bottom: 10px;
-    margin-top: -10px;
-    width: 100%;
-    font-size: 1.5rem;
-    border: none;
-    border-bottom: solid 1px $dark-grey;
-    transition: all 0.3s ease-in-out;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 99%, $dark-grey 1%);
-    background-position: -1000px 0;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    color: darken($dark-grey, 20%);
-    padding: 20px 0;
-    min-height: 120px;
-    transform: translateX(0%);
-    transition: all 0.3s ease-in-out;
-    &:focus {
-        box-shadow: none;
-        outline: none;
-        background-position: 0 0;
-        &::-webkit-input-placeholder {
-            color: $dark-grey;
-            transform: translateY(-20px);
-            visibility: visible !important;
-            transition: all 0.3s ease-in-out;
+.sceletus-form textarea {
+    padding: 20px 5px;
+    margin-top: -5px;
+}
+
+.sceletus-form input[type="radio"] {
+    display: none;
+    + .sceletus-radio:before{
+        content: "\f111";
+        color: $dark-grey;
+        font-family: "FontAwesome";
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        widht: 1.5em;
+        display: inline-block;
+        margin-right: 5px;
+    }
+    &:checked + .sceletus-radio:before {
+        content: "\f192";
+        color: $dark-grey;
+        animation: tick 0.2s ease-in;
+        -webkit-animation: tick 0.2s ease-in;
+        -moz-animation: tick 0.2s ease-in;
+        -o-animation: tick 0.2s ease-in;
+    }
+    &:disabled + .sceletus-radio{
+        color: $light-grey;
+        &:before {
+            content: "\f111";
+            color: $light-grey;
         }
     }
-    &::-webkit-input-placeholder {
-        transition: all 0.1s ease-in-out;
+}
+
+.sceletus-form input[type="checkbox"] {
+    display: none;
+    + .sceletus-check:before{
+        content: "\f0c8";
+        color: $dark-grey;
+        font-family: "FontAwesome";
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        widht: 1.5em;
+        display: inline-block;
+        margin-right: 5px;
+    }
+    &:checked + .sceletus-check:before {
+        content: "\f14a";
+        color: $dark-grey;
+        animation: tick 0.2s ease-in;
+        -webkit-animation: tick 0.2s ease-in;
+        -moz-animation: tick 0.2s ease-in;
+        -o-animation: tick 0.2s ease-in;
+    }
+    &:disabled + .sceletus-check{
+        color: $light-grey;
+        &:before {
+            content: "\f0c8";
+            color: $light-grey;
+        }
     }
 }
-.sceletus_form input[type="checkbox"],
-.sceletus_form input[type="radio"] {
-    margin: 8px 5px 0px;
+@-webkit-keyframes tick {
+  0% { transform: scale(0); }
+  90% { transform: scale(1.4); }
+  100% { transform: scale(1); }
 }
+@-moz-keyframes tick {
+  0% { transform: scale(0); }
+  90% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+@-o-keyframes tick {
+  0% { transform: scale(0); }
+  90% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+@keyframes tick {
+  0% { transform: scale(0); }
+  90% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
 
 /***********************************************/
 /******************** VIDEO ********************/
