@@ -243,12 +243,8 @@ input:checked#message ~ .sceletus-alert.message, input:checked#success ~ .scelet
 /***********************************************/
 .sceletus-form label { cursor: pointer; }
 
-.sceletus-form input[type="text"], .sceletus-form input[type="email"], .sceletus-form input[type="password"], .sceletus-form textarea { margin: 12px 0; padding: 7px 5px; width: 100%; background: none; border: none; border-bottom: 1px solid #444444; font-size: 1.5rem; }
-.sceletus-form input[type="text"]:focus, .sceletus-form input[type="email"]:focus, .sceletus-form input[type="password"]:focus, .sceletus-form textarea:focus { box-shadow: none; outline: none; background-position: 0 0; }
-.sceletus-form input[type="text"]:focus::-webkit-input-placeholder, .sceletus-form input[type="email"]:focus::-webkit-input-placeholder, .sceletus-form input[type="password"]:focus::-webkit-input-placeholder, .sceletus-form textarea:focus::-webkit-input-placeholder { color: #444444; transform: translateY(-25px); visibility: visible !important; transition: all 0.3s ease-in-out; }
-.sceletus-form input[type="text"]::-webkit-input-placeholder, .sceletus-form input[type="email"]::-webkit-input-placeholder, .sceletus-form input[type="password"]::-webkit-input-placeholder, .sceletus-form textarea::-webkit-input-placeholder { transition: all 0.1s ease-in-out; }
-
-.sceletus-form textarea { padding: 20px 5px; margin-top: -5px; }
+.sceletus-form input[type="text"], .sceletus-form input[type="email"], .sceletus-form input[type="password"], .sceletus-form textarea { margin: 12px 0; padding: 7px 5px; width: 100%; background: none; border: none; border: 1px solid #999999; font-size: 1.5rem; border-radius: 3px; }
+.sceletus-form input[type="text"]:focus, .sceletus-form input[type="email"]:focus, .sceletus-form input[type="password"]:focus, .sceletus-form textarea:focus { box-shadow: none; outline: none; background-position: 0 0; border: 1px solid #444444; }
 
 .sceletus-form input[type="radio"] { display: none; }
 .sceletus-form input[type="radio"] + .sceletus-radio:before { content: "\f111"; color: #444444; font-family: "FontAwesome"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; widht: 1.5em; display: inline-block; margin-right: 5px; }
