@@ -517,26 +517,15 @@ input:checked#error ~ .sceletus-alert.error { display: none; }
     width: 100%;
     background: none;
     border: none;
-    border-bottom: 1px solid $dark-grey;
+    border: 1px solid $light-grey;
     font-size: 1.5rem;
+    border-radius: 3px;
     &:focus {
         box-shadow: none;
         outline: none;
         background-position: 0 0;
-        &::-webkit-input-placeholder {
-            color: $dark-grey;
-            transform: translateY(-25px);
-            visibility: visible !important;
-            transition: all 0.3s ease-in-out;
-        }
+        border: 1px solid $dark-grey;
     }
-    &::-webkit-input-placeholder {
-        transition: all 0.1s ease-in-out;
-    }
-}
-.sceletus-form textarea {
-    padding: 20px 5px;
-    margin-top: -5px;
 }
 
 .sceletus-form input[type="radio"] {
