@@ -1,37 +1,893 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
     <!--Basic page needs-->
     <title>Document title</title>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="author" content="">
-    
+
     <!--Responsive needs-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--CSS-->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/sceletus.css">
-    
+
     <!--Favicon-->
     <link rel="icon" type="image/ico" href="images/favicon.ico">
 
 </head>
 <body>
-    
+
     <!--Content-->
     <div class="container">
-        <div class="row" style="margin-top:25%;">
-            <div class="col-m-12">
-                <h1>This is a basic page</h1>
-                <p>This <code>index.html</code> serves as a template, just waiting for you to add some content. 
-                If you need help just visit the <a href="http://sceletus.net/">sceletus.css documentation</a></p>
+
+        <div class="row">
+
+            <div class="col-s-3 nav">
+                <!-- ########## MENU ########## -->
+                <nav id="menu">
+<ul>
+    <p class="muted">Introduction</p>
+    <li><a href="#intro">Getting Started</a></li>
+    <li><a href="#examples">Examples</a></li>
+    <br>
+    <p class="muted">Components</p>
+    <li><a href="#grid">Grid</a></li>
+    <li><a href="#typography">Typography</a></li>
+    <li><a href="#code">Code</a></li>
+    <li><a href="#buttons">Buttons</a></li>
+    <li><a href="#lists">Lists</a></li>
+    <li><a href="#forms">Forms</a></li>
+    <li><a href="#labels">Labels</a></li>
+    <li><a href="#tables">Tables</a></li>
+    <li><a href="#modals">Modals</a></li>
+    <li><a href="#alert">Alerts</a></li>
+    <li><a href="#video">Video</a></li>
+    <li><a href="#image">Images</a></li>
+    <li><a href="#utilities">Utilities</a></li>
+    <li><a href="#queries">Queries</a></li>
+</ul>
+</nav>
+            </div>
+
+            <div class="col-s-9">
+
+                <!-- ########## GETTING STARTED ########## -->
+                <section>
+    <div class="row">
+        <div class="col-l-12">
+
+            <h2 class="title" id="intro">Getting started</h2>
+            <br>
+
+            <h4 class="sub-title">Add sceletus.css to your page</h4>
+            <p>You can use sceletus.css on your page by adding the following <code>&lt;link&gt;</code> element into your page's <code>&lt;head&gt;</code>, before your project's stylesheets.</p><br>
+
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;link href="path/to/sceletus.css" rel="stylesheet"/&gt;</code></pre>
+            <br>
+
+            <a href="css/sceletus_v1.6.1.zip" class="button blue big" download="">
+                Alternatively you can download sceletus.css here
+            </a>
+            <br><br><br>
+            <h4 class="sub-title">Add the Viewport Meta Element</h4>
+            <p>The viewport meta element lets you control the the width and scale of the viewport on mobile browsers.
+            Since you're building a responsive website, you want the width to be equal to the device's native width. Add this into your page's <code>&lt;head&gt;</code>.</p><br>
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+
+            <br><br>
+
+        </div>
+    </div>
+</section>
+                <hr class="line">
+
+                <!-- ########## EXAMPLES ########## -->
+                  <section>
+
+    <div class="row">
+
+        <h2 class="title" id="examples">Examples</h2>
+
+        <div class="col-s-6">
+            <div style="margin: 10px; border: 1px solid #ccc">
+                <a href="http://web.archive.org/web/20150509010851/http://web-assets.net/" target="_target" title="link to web-assets.net">
+                    <img src="/web/20150509010851im_/http://sceletus.net/img/ex3.png" class="sceletus-img" title="example 3" alt="example 3">
+                </a>
             </div>
         </div>
-    </div> 
+
+        <div class="col-s-6">
+            <div style="margin: 10px; border: 1px solid #ccc">
+                <a href="http://web.archive.org/web/20150509010851/http://dittesdilemma.dk/" target="_target" title="link to dittesdilemma.dk">
+                    <img src="/web/20150509010851im_/http://sceletus.net/img/ex2.png" class="sceletus-img" title="example 2" alt="example 2">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-s-6">
+            <div style="margin: 10px; border: 1px solid #ccc">
+                <a href="http://web.archive.org/web/20150509010851/http://d3sign.dk/" target="_target" title="link to d3sign.dk">
+                    <img src="/web/20150509010851im_/http://sceletus.net/img/ex1.png" class="sceletus-img" title="example 1" alt="example 1">
+                </a>
+            </div>
+        </div>
+
+        <div class="col-s-6">
+            <div style="margin: 10px; border: 1px solid #ccc">
+                <a href="http://web.archive.org/web/20150509010851/http://tomjw..dk/" target="_target" title="link to tomjw.dk">
+                    <img src="/web/20150509010851im_/http://sceletus.net/img/ex4.png" class="sceletus-img" title="example 4" alt="example 4">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+                <hr class="line">
+
+                <!-- ########## THE GRID ########## -->
+                <section>
+    <div class="row">
+        <h2 class="title" id="grid">The Grid</h2>
+        <div class="col-s-1"><div class="mod-1">1/12</div></div>
+        <div class="col-s-11"><div class="mod-1">11/12</div></div>
+        <div class="col-s-2"><div class="mod-1">2/12</div></div>
+        <div class="col-s-10"><div class="mod-1">10/12</div></div>
+        <div class="col-s-3"><div class="mod-1">3/12</div></div>
+        <div class="col-s-9"><div class="mod-1">9/12</div></div>
+        <div class="col-s-4"><div class="mod-1">4/12</div></div>
+        <div class="col-s-8"><div class="mod-1">8/12</div></div>
+        <div class="col-s-5"><div class="mod-1">5/12</div></div>
+        <div class="col-s-7"><div class="mod-1">7/12</div></div>
+        <div class="col-s-6"><div class="mod-1">6/12</div></div>
+        <div class="col-s-6"><div class="mod-1">6/12</div></div>
+        <div class="col-s-7"><div class="mod-1">7/12</div></div>
+        <div class="col-s-5"><div class="mod-1">5/12</div></div>
+        <div class="col-s-8"><div class="mod-1">8/12</div></div>
+        <div class="col-s-4"><div class="mod-1">4/12</div></div>
+        <div class="col-s-9"><div class="mod-1">9/12</div></div>
+        <div class="col-s-3"><div class="mod-1">3/12</div></div>
+        <div class="col-s-10"><div class="mod-1">10/12</div></div>
+        <div class="col-s-2"><div class="mod-1">2/12</div></div>
+        <div class="col-s-11"><div class="mod-1">11/12</div></div>
+        <div class="col-s-1"><div class="mod-1">1/12</div></div>
+        <div class="col-s-12"><div class="mod-1">12/12</div></div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-l-12">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;!-- .container is the main wrapper --&gt;
+&lt;div class="container"&gt;
+
+  &lt;!-- columns (e.i. col-m-11 and so on) should be the immediate child of a .row --&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-m-1"&gt;  &lt;/div&gt;
+    &lt;div class="col-m-11"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- there is a total of 12 columns to use. The following fills the entire width of the container --&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-m-12"&gt;  &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!--- There is a total of 4 different column-classes to use. Each corrosponding to a different breakpoint --&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-xs-12"&gt; Greater than 0px &lt;/div&gt;
+    &lt;div class="col-s-6"&gt; Greater than 768px &lt;/div&gt;
+    &lt;div class="col-m-4"&gt; Greater than 992px &lt;/div&gt;
+    &lt;div class="col-l-3"&gt; Greater than 1200px &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- This example uses all 4 breakpoints to alter the grid structure based on width --&gt;
+  &lt;div class="row center-text"&gt;
+    &lt;div class="col-xs-12 col-s-6 col-m-3 col-l-3"&gt;&lt;/div&gt;
+    &lt;div class="col-xs-12 col-s-6 col-m-3 col-l-3"&gt;&lt;/div&gt;
+    &lt;div class="col-xs-12 col-s-6 col-m-3 col-l-3"&gt;&lt;/div&gt;
+    &lt;div class="col-xs-12 col-s-6 col-m-3 col-l-3"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</section>
+                <hr class="line">
+
+                <!-- ########## TYPOGRAPHY ########## -->
+                <section>
+    <div class="row">
+        <h2 class="title" id="typography">Typography</h2>
+        <div class="col-m-12">
+            <p>The typography base is <a href="http://web.archive.org/web/20150509010851/http://www.google.com/fonts/specimen/Open+Sans" target="_target">Open Sans</a> served by Google, set at 15px over a 1.6 line height (24px).
+            Other types like <a>anchors</a>, <strong>strong</strong>, <em>emphasis</em>, and <u>underline</u> are all included.</p><br>
+            <p>Headings come in six distinct sizes each with specific letter-spacing, line-height, and margins.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-m-5">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <br>
+            <p>The base type is 15px over 1.6 line height (24px)</p><br>
+            <strong>Bolded</strong>, <em>Italicized</em>, <a>Colored</a>, <u>Underlined</u><br><br>
+        </div>
+        <div class="col-l-7">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;!-- Headings --&gt;
+&lt;h1&gt;Heading&lt;/h1&gt;
+&lt;h2&gt;Heading&lt;/h2&gt;
+&lt;h3&gt;Heading&lt;/h3&gt;
+&lt;h4&gt;Heading&lt;/h4&gt;
+&lt;h5&gt;Heading&lt;/h5&gt;
+&lt;h6&gt;Heading&lt;/h6&gt;
+
+&lt;!-- Base text - paragraphs --&gt;
+&lt;p&gt;The base type is 15px over 1.6 line height (24px)&lt;/p&gt;
+
+&lt;!-- Other styled text tags --&gt;
+&lt;strong&gt;Bolded&lt;/strong&gt;
+&lt;em&gt;Italicized&lt;/em&gt;
+&lt;a&gt;Colored&lt;/a&gt;
+&lt;u&gt;Underlined&lt;/u&gt;</code></pre>
+        </div>
+    </div>
+</section>
+                <hr class="line">
+
+                <!-- ########## CODE ########## -->
+                <section>
+    <div class="row">
+        <h2 class="title" id="code">Code</h2>
+        <div class="col-m-12">
+            <p>Code styling is kept basic – just wrap anything in a <code>&lt;code&gt;</code> and it will appear like <code>this</code>. For blocks of code, wrap a <code>&lt;code&gt;</code> with a <code>&lt;pre&gt;</code>.</p>
+        </div>
+        <div class="col-l-12">
+        <br>
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;pre&gt;&lt;code&gt;
+.some-class {
+  background-color: red;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- All whitespaces will be preserved --&gt;</code></pre>
+        </div>
+    </div>
+</section>
+                <hr class="line">
+
+                <!-- ########## BUTTONS ########## -->
+                <section>
+    <div class="row">
+        <div class="col-l-12">
+            <h2 class="title" id="buttons">Buttons</h2>
+            <p>To make a button, simply add the <code>.button</code> class to an element followed by a color and a size.<br><br>
+            The buttons come in 6 different colors: <code>.green</code> <code>.blue</code>
+            <code>.red</code> <code>.yellow</code> <code>.light</code> <code>.dark</code>
+            They also come in 3 different sizes. Add <code>.big</code> to make big button and <code>.small</code>
+            to make a small one. To make a normal button, don't add a size class.</p><br>
+            <h4 class="sub-title">Regular buttons</h4>
+            <a class="button green" href="#0">Green button</a>
+            <a class="button blue" href="#0">Blue button</a>
+            <a class="button red" href="#0">Red button</a>
+            <a class="button yellow" href="#0">Yellow button</a>
+            <a class="button light" href="#0">Light button</a>
+            <a class="button dark" href="#0">Dark button</a>
+            <br><br>
+            <h4 class="sub-title">Big buttons</h4>
+            <a class="button green big" href="#0">Green button</a>
+            <a class="button blue big" href="#0">Blue button</a>
+            <a class="button red big" href="#0">Red button</a>
+            <a class="button yellow big" href="#0">Yellow button</a>
+            <a class="button light big" href="#0">Light button</a>
+            <a class="button dark big" href="#0">Dark button</a>
+            <br><br>
+            <h4 class="sub-title">Small buttons</h4>
+            <a class="button green small" href="#0">Green button</a>
+            <a class="button blue small" href="#0">Blue button</a>
+            <a class="button red small" href="#0">Red button</a>
+            <a class="button yellow small" href="#0">Yellow button</a>
+            <a class="button light small" href="#0">Light button</a>
+            <a class="button dark small" href="#0">Dark button</a>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-l-12">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;!-- Big red button --&gt;
+&lt;button class="button red big"&gt;&lt;/button&gt;
+
+&lt;!-- Regular green button --&gt;
+&lt;a class="button green" href="#"&gt;Green button&lt;/a&gt;
+
+&lt;!-- Small yellow button --&gt;
+&lt;input type="submit" class="button yellow small" /&gt;</code></pre>
+        </div>
+    </div>
+</section>                <hr class="line">
+
+                <!-- ########## LISTS ########## -->
+                <section>
+    <div class="row">
+        <h2 class="title" id="lists">Lists</h2>
+        <div class="col-m-6">
+            <ul>
+                <li>Unordered lists have basic styles</li>
+                <li>They use the circle list style
+                    <ul>
+                        <li>Nested lists use the disc list style</li>
+                        <li>Unordered lists can nest either type of list</li>
+                    </ul>
+                </li>
+                <li>Just another list item</li>
+            </ul>
+        </div>
+        <div class="col-m-6">
+            <ol>
+                <li>Ordered lists have basic styles</li>
+                <li>They use the decimal list style
+                    <ul>
+                        <li>Ordered lists can nest either type of list</li>
+                        <li>Nested lists have a smaller font-size</li>
+                    </ul>
+                </li>
+                <li>Another list item</li>
+            </ol>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-l-12">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;ol&gt;
+   &lt;li&gt;Ordered list item 1&lt;/li&gt;
+   &lt;li&gt;Oredere list item 2
+      &lt;ul&gt;
+         &lt;li&gt;Unordered list item 2.1&lt;/li&gt;
+         &lt;li&gt;Unordered list item 2.2&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/li&gt;
+   &lt;li&gt;Ordere list item 3&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Substitute any &lt;ul&gt; or &lt;ol&gt; to get a numbered list or a bulleted list. skeletus.css does not support lists nested deeper than 2 levels --&gt;</code></pre>
+        </div>
+    </div>
+</section>                <hr class="line">
+
+                <!-- ########## FORMS ########## -->
+                <section>
+    <div class="row">
+        <h2 class="title" id="forms">Forms</h2>
+        <p>Sceletus.css aims to reinvent the input layout model, thus sceletus.css has adopted a very simplistic layout. <br>The colours can be easily changed in the<code>.scss</code> file.</p><br>
+        <p>To use the sceletus form styles, you must wrap the inputs with a <code>.sceletus_form</code> class. You can apply the class on a <code>div</code> element, or directly on the <code>form</code>.</p><br><br>
+
+       <div class="col-m-6" style="padding:15px;">
+            <h4 class="sub-title">Login form</h4>
+            <form class="sceletus-form">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <input class="button dark" type="submit" value="Sign In">
+                <label class="pull-right">
+                    <input type="checkbox" name="check">
+                    <span class="sceletus-check">Remember me</span>
+                </label>
+            </form>
+        </div>
+        <div class="col-m-12" style="padding:15px;">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;form class="sceletus-form"&gt;
+   &lt;input type="email" placeholder="Email"&gt;
+   &lt;input type="password" placeholder="Password"&gt;
+   &lt;input class="button blue" type="submit" value="Sign In"&gt;
+   &lt;input class="pull-right" id="remember" type="checkbox"&gt;
+   &lt;label class="pull-right" for="remember"&gt; Remember me&lt;/label&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-m-6" style="padding:15px;">
+            <h4 class="sub-title">Contact form</h4>
+            <form class="sceletus-form">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Message"></textarea>
+                <input class="button dark full-width" type="submit" value="Send">
+            </form>
+        </div>
+        <div class="col-m-12" style="padding:15px;">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;form class="sceletus-form"&gt;
+   &lt;input type="text" placeholder="Name"&gt;
+   &lt;input type="email" placeholder="Email"&gt;
+   &lt;textarea placeholder="Message"&gt;&lt;/textarea&gt;
+   &lt;input class="button blue full-width" type="submit" value="Send"&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-m-12" style="padding:15px;">
+            <h4 class="sub-title">Checkboxes</h4>
+            <form class="sceletus-form">
+                <label>
+                    <input type="checkbox" name="check" checked="">
+                    <span class="sceletus-check">Checked</span>
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="check">
+                    <span class="sceletus-check">Unckecked</span>
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="check" disabled="">
+                    <span class="sceletus-check">Disabled</span>
+                </label>
+            </form>
+        </div>
+        <div class="col-m-12" style="padding:15px;">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;h4&gt;Checkboxes&lt;/h4&gt;
+
+&lt;form class="sceletus-form"&gt;
+
+  &lt;!--Checked--&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" name="check" checked&gt;
+    &lt;span class="sceletus-check"&gt;Checked&lt;/span&gt;
+  &lt;/label&gt;
+
+  &lt;!--Unchecked--&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" name="check"&gt;
+    &lt;span class="sceletus-check"&gt;Unckecked&lt;/span&gt;
+  &lt;/label&gt;
+
+  &lt;!--Disabled--&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox" name="check" disabled&gt;
+    &lt;span class="sceletus-check"&gt;Disabled&lt;/span&gt;
+  &lt;/label&gt;
+
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-m-12" style="padding:15px;">
+            <h4 class="sub-title">Radio Buttons</h4>
+            <form class="sceletus-form">
+                <label>
+                    <input type="radio" name="radio" checked="">
+                    <span class="sceletus-radio">Selected</span>
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="radio">
+                    <span class="sceletus-radio">Unselected</span>
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="radio" disabled="">
+                    <span class="sceletus-radio">Disabled</span>
+                </label>
+            </form>
+        </div>
+        <div class="col-m-12" style="padding:15px;">
+             <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;h4&gt;Radio Buttons&lt;/h4&gt;
+
+&lt;form class="sceletus-form"&gt;
+
+  &lt;!--Selected--&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="radio" checked&gt;
+    &lt;span class="sceletus-radio"&gt;Selected&lt;/span&gt;
+  &lt;/label&gt;
+
+  &lt;!--Unselected--&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="radio"&gt;
+    &lt;span class="sceletus-radio"&gt;Unselected&lt;/span&gt;
+  &lt;/label&gt;
+
+  &lt;!--Disabled--&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="radio" disabled&gt;
+    &lt;span class="sceletus-radio"&gt;Disabled&lt;/span&gt;
+  &lt;/label&gt;
+
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+</section>                <hr class="line">
+
+                <!-- ########## LABELS ########## -->
+                <section>
+    <div class="row">
+        <div class="col-l-12">
+            <h2 class="title" id="labels">Labels</h2>
+            <p>To make a label, simply add the <code>.label</code> class to an element followed by a color.<br>
+            The labels come in 6 different colors: <code>.green</code> <code>.blue</code>
+            <code>.red</code> <code>.yellow</code> <code>.light</code> <code>.dark</code></p><br>
+            <h4 class="sub-title">Labels</h4>
+            <span class="label blue">Blue label</span>
+            <span class="label yellow">Yellow label</span>
+            <span class="label green">green label</span>
+            <span class="label red">Red label</span>
+            <span class="label light">Light label</span>
+            <span class="label dark">Dark label</span>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-l-12">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;!-- Big red button --&gt;
+&lt;button class="button red big"&gt;&lt;/button&gt;
+
+&lt;!-- Regular green button --&gt;
+&lt;a class="button green" href="#"&gt;Green button&lt;/a&gt;
+
+&lt;!-- Small yellow button --&gt;
+&lt;input type="submit" class="button yellow small" /&gt;</code></pre>
+        </div>
+    </div>
+</section>                <hr class="line">
+
+                <!-- ########## TABLES ########## -->
+                <section>
+    <div class="row">
+        <h2 class="title" id="tables">Tables</h2>
+        <div class="col-m-12">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Favorite Color</th>
+                        <th>Occupation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jim</td>
+                        <td>00001</td>
+                        <td>Blue</td>
+                        <td>Police officer</td>
+                    </tr>
+                    <tr>
+                        <td>Sue</td>
+                        <td>00002</td>
+                        <td>Red</td>
+                        <td>Lawyer</td>
+                    </tr>
+                    <tr>
+                        <td>Barb</td>
+                        <td>00003</td>
+                        <td>Green</td>
+                        <td>Nurse</td>
+                    </tr>
+                    <tr>
+                        <td>Evan</td>
+                        <td>00004</td>
+                        <td>Yellow</td>
+                        <td>Barista</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-l-12">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;ID&lt;/th&gt;
+      &lt;th&gt;Favorite Color&lt;/th&gt;
+      &lt;th&gt;Occupation&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Jim&lt;/td&gt;
+      &lt;td&gt;00001&lt;/td&gt;
+      &lt;td&gt;Blue&lt;/td&gt;
+      &lt;td&gt;Police officer&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sue&lt;/td&gt;
+      &lt;td&gt;00002&lt;/td&gt;
+      &lt;td&gt;Red&lt;/td&gt;
+      &lt;td&gt;Lawyer&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Barb&lt;/td&gt;
+      &lt;td&gt;00003&lt;/td&gt;
+      &lt;td&gt;Green&lt;/td&gt;
+      &lt;td&gt;Nurse&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Evan&lt;/td&gt;
+      &lt;td&gt;00004&lt;/td&gt;
+      &lt;td&gt;Yellow&lt;/td&gt;
+      &lt;td&gt;Barista&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+    </div>
+</section>                <hr class="line">
+
+                <!-- ########## MODALS ########## -->
+                <section>
+    <div class="row">
+        <h2 class="title" id="modals">Modals</h2>
+        <div class="col-m-12">
+            <p>To use the modal module, simply add the code below where you want the modal to appear.</p><br>
+            <!--Modal start-->
+            <input id="modal" type="checkbox" hidden="hidden" name="modal" tab-index="1">
+            <label for="modal" class="button yellow big">Launch Modal</label>
+            <div class="modal_overlay">
+                <div class="modal_box">
+                    <label for="modal">✖</label>
+                    <h2>This is your modal content</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac laoreet elit. Phasellus dignissim purus vitae urna cursus, quis congue ligula tristique. Ut nec blandit risus. Donec at orci ut justo venenatis viverra. Suspendisse in volutpat lacus. In enim est, dapibus eget ipsum sed, suscipit ultrices diam.</p>
+                </div>
+            </div>
+            <!--Modal End-->
+        </div>
+
+        <div class="col-l-12">
+        <br><br>
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;!--Modal start--&gt;
+&lt;input id="modal" type="checkbox" hidden="hidden" name="modal" tab-index="1"&gt;
+&lt;label for="modal" class="button yellow big"&gt;Launch Modal&lt;/label&gt;
+&lt;div class="modal_overlay"&gt;
+  &lt;div class="modal_box"&gt;
+    &lt;label for="modal"&gt;&amp;#10006;&lt;/label&gt;
+    &lt;h2&gt;This is your modal content&lt;/h2&gt;
+    &lt;p&gt;More modal content&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--Modal End--&gt;</code></pre>
+        </div>
+    </div>
+</section>                <hr class="line">
+
+                <!-- ########## ALERTS ########## -->
+                <section>
+    <div class="row">
+        <h2 class="title" id="alert">Alert Boxes</h2>
+        <div class="col-m-12">
+            <p>Sceletus comes with a few alert boxes. By default they will fill the width of the container they're placed in.</p>
+            <p>There are currently 4 different alerts: <code>.message</code>, <code>.success</code>, <code>.warning</code> and <code>.error</code>.</p><br>
+
+            <input id="message" type="checkbox" hidden="hidden" name="message" tab-index="0">
+            <div class="sceletus-alert message">
+                By continuing to use this site, you agree to <a href="#0">our cookie policy</a>
+                <label for="message" class="close">✖</label>
+            </div>
+
+            <input id="success" type="checkbox" hidden="hidden" name="success" tab-index="0">
+            <div class="sceletus-alert success">
+                Success! Your settings were changed
+                <label for="success" class="close">✖</label>
+            </div>
+
+            <input id="warning" type="checkbox" hidden="hidden" name="warning" tab-index="0">
+            <div class="sceletus-alert warning">
+                Warning! Your post has been deleted!
+                <label for="warning" class="close">✖</label>
+            </div>
+
+            <input id="error" type="checkbox" hidden="hidden" name="error" tab-index="0">
+            <div class="sceletus-alert error">
+                Whoops, something went horribly wrong!
+                <label for="error" class="close">✖</label>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-l-12">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;!-- (Blue) Message alert --&gt;
+&lt;input id="message" type="checkbox" hidden="hidden" name="message" tab-index="0"&gt;
+&lt;div class="sceletus-alert message"&gt;
+    By continuing to use this site, you agree to &lt;a href="#0"&gt;our cookie policy&lt;/a&gt;
+    &lt;label for="message" class="close"&gt;&amp;#10006&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- (Green) Success alert --&gt;
+&lt;input id="success" type="checkbox" hidden="hidden" name="success" tab-index="0"&gt;
+&lt;div class="sceletus-alert success"&gt;
+    Success! Your settings were changed
+    &lt;label for="success" class="close"&gt;&amp;#10006&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- (Yellow) Warning alert --&gt;
+&lt;input id="warning" type="checkbox" hidden="hidden" name="warning" tab-index="0"&gt;
+&lt;div class="sceletus-alert warning"&gt;
+    Warning! Your post has been deleted!
+    &lt;label for="warning" class="close"&gt;&amp;#10006&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- (Red) Error alert --&gt;
+&lt;input id="error" type="checkbox" hidden="hidden" name="error" tab-index="0"&gt;
+&lt;div class="sceletus-alert error"&gt;
+    Whoops, something went horribly wrong!
+    &lt;label for="error" class="close"&gt;&amp;#10006&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</section>                <hr class="line">
+
+                <!-- ########## VIDEO ########## -->
+                <section>
+    <div class="row">
+        <h2 class="title" id="video">Responsive Videos</h2>
+        <p>To use the sceletus responsive video, simply wrap your video iframe in a container with class <code>sceletus-video</code>.
+        Sceletus presumes that the aspect ratio of the video is 16:9 and scales accordingly.
+        <strong>Remember to remove the <code>width</code> and <code>height</code> property from the iframe tag.</strong></p><br>
+        <div class="col-m-12">
+            <div class="sceletus-video">
+                <iframe src="http://web.archive.org/web/20150509010851if_/https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-l-12">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;div class="sceletus-video"&gt;
+  &lt;iframe src="https://www.youtube.com/embed/Dm0YnuQeROI"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</section>                <hr class="line">
+
+                <!-- ########## IMAGES ########## -->
+                <section>
+    <div class="row">
+        <h2 class="title" id="image">Image shapes</h2>
+        <p>Images in sceletus can be made responsive by using the <code>.sceletus-img</code> class.<br>
+        This applies <code>max-width: 100%;</code>, <code>height: auto;</code> and <code>display: block;</code>
+        to the image so it scales to the parent element. See the <a href="#utilities">Utilities section</a> for more details</p><br><br>
+        <div class="col-m-4">
+            <div class="image-display">
+                <h4 class="sub-title">Rounded corners</h4>
+                <p>Add the <code>.rounded</code> class to your image</p><br>
+                <img src="http://web.archive.org/web/20150509010851im_/http://lorempixel.com/800/800" class="sceletus-img rounded" alt="Rounded corners">
+            </div>
+        </div>
+        <div class="col-m-4">
+            <div class="image-display">
+                <h4 class="sub-title">Circle</h4>
+                <p>Add the <code>.circle</code> class to your image</p><br>
+                <img src="http://web.archive.org/web/20150509010851im_/http://lorempixel.com/802/802" class="sceletus-img circle" alt="Circle">
+            </div>
+        </div>
+        <div class="col-m-4">
+            <div class="image-display">
+                <h4 class="sub-title">Border</h4>
+                <p>Add the <code>.border</code> class to your image</p><br>
+                <img src="http://web.archive.org/web/20150509010851im_/http://lorempixel.com/804/804" class="sceletus-img border" alt="Border">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-l-12">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="html">&lt;!--Rounded corners--&gt;
+&lt;img src="http://lorempixel.com/800/800" class="sceletus-img rounded" alt="Rounded corners" /&gt;
+
+&lt;!--Circle--&gt;
+&lt;img src="http://lorempixel.com/800/800" class="sceletus-img circle" alt="Circle" /&gt;
+
+&lt;!-- Border--&gt;
+&lt;img src="http://lorempixel.com/800/800" class="sceletus-img border" alt="Border" /&gt;</code></pre>
+        </div>
+    </div>
+</section>                <hr class="line">
+
+                <!-- ########## UTILITIES ########## -->
+                <section>
+    <div class="row">
+        <h2 class="title" id="utilities">Utilities</h2>
+        <div class="col-m-12">
+            <p>sceletus.css comes with a number of utility classes you can use in your projects.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-l-12">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="css">
+.center-text /* Useful for centering text and elements within the grid */
+.pull-right /* Used to float elements to the right */
+.pull-left /* Used to float elements to the left */
+.clear /* Used to clear floats */
+.full-width /* Used to set the width of an element to 100% of its parent's width */
+.disabled /* Used to disable an element - to make it non-clickable */
+.muted /* Makes the text color grey, good for article date and time */
+.animated /* Adding smooth transitions to e.g. buttons and other hover effects */
+.sceletus-img /* Add class to an image to make it responsive */</code></pre>
+        </div>
+    </div>
+</section>                <hr class="line">
+
+                <!-- ########## QUERIES ########## -->
+                <section>
+    <div class="row">
+        <h2 class="title" id="queries">Queries</h2>
+        <div class="col-m-12">
+            <p>sceletus.css uses media queries to generate its scalable grid.
+            It comes with a list a queries that makes it easy to style you projects across devices.
+            The queries are mobile first, which means they target "min-width".</p>
+            <ul>
+                <li><strong>Mobile:</strong> 768px</li>
+                <li><strong>Tablet:</strong> 992px</li>
+                <li><strong>Desktop:</strong> 1200px</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-l-12">
+            <em>CODE EXAMPLE</em>
+            <pre><code class="css">/* Larger than mobile */
+@media (min-width: 768px) { }
+
+/* Larger than tablet */
+@media (min-width: 992px) { }
+
+/* Larger then desktop */
+@media (min-width: 1200px) { }</code></pre>
+        </div>
+    </div>
+</section>                <hr class="line">
+
+                <!-- ########## FOOTER ########## -->
+                <footer>
+<p>Made with
+<svg class="heart" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="92.515px" height="73.161px" viewBox="0 0 92.515 73.161" enable-background="new 0 0 92.515 73.161" xml:space="preserve"><g><path fill="#010101" d="M82.32,7.888c-8.359-7.671-21.91-7.671-30.271,0l-5.676,5.21l-5.678-5.21c-8.357-7.671-21.91-7.671-30.27,0c-9.404,8.631-9.404,22.624,0,31.255l35.947,32.991L82.32,39.144C91.724,30.512,91.724,16.52,82.32,7.888z"></path></g></svg>
+by <a href="http://web.archive.org/web/20150509010851/https://github.com/triss90405" target="_target">Tristan White</a></p>
+<p>©Copyright 2015 - <a href="http://web.archive.org/web/20150509010851/http://d3sign.dk/" target="_target">d3sign</a></p>
+<p>View the <a href="http://web.archive.org/web/20150509010851/https://github.com/triss90405/sceletus.css/commits/master" target="_target">Changelog</a></p>
+
+
+</footer>
+            </div>
+        </div>
+    </div>
     <!--Content End-->
-    
+
 </body>
 </html>
